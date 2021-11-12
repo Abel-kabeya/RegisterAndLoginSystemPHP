@@ -1,3 +1,7 @@
+<?php
+require "database/mysql.php";
+?>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,3 +55,21 @@
     
 </body>
 </html>
+<?php
+    if(isset($_POST['Register']))
+    {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        $img=$_FILES['img1']['name'];
+        $temp_name=$_FILES['img1']['tmp_name'];
+        $filepath="images/$img";
+        move_uploaded_file($temp_name,$filepath);
+        $query2="INSERT INTO admin (username, password, img) VALUES('$username','$password','$img')";
+        $runquery2=mysqli_query($con,$query2);
+            if($runquery2)
+            {
+                echo '<script>alert("Account has been registered")</script>';
+            }
+            
+    }
+?>

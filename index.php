@@ -1,3 +1,7 @@
+<?php
+require 'database/mysql.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,3 +50,20 @@
     </div>
 </body>
 </html>
+<?php
+    if(isset($_POST['SignIn']))
+    {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        $query1="SELECT * FROM admin WHERE username='$username' AND password='$password'";
+        $runquery1=mysqli_query($con,$query1);
+        if(mysqli_num_rows($runquery1)>0)
+        {
+            header('location:Mainpage.php');
+            $_SESSION['username']=$username;
+        }else
+        {
+            echo '<script>alert("Invalid username and password")</script>';
+        }
+    }
+?>
