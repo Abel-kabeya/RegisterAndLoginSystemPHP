@@ -6,7 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
 </head>
-<body>
+<body background = "images/Universe.jpg">
+
+<div id="Mainwrapper">
+        <form method="post" enctype="multipart/form-data">
+            <table align="center" style="color:white;width:365px;height:200px;postion:relative;margin-top:200px;"border="1">
+                <tr>
+                    <td style="position:relative;left:50px;bottom:5px;background-color:#1D2247;">
+                        <center><h3>Register Form</h3></center>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><center>Username</center></td>
+                    <td><input type="text" name="username" placeholder="type your username"></td>
+                </tr>
+
+                <tr>
+                    <td><center>Password</center></td>
+                    <td><input type="password" name="password" placeholder="type your password"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                       <center>
+                           <input type="submit" name="Register" value="Register" style="background-color:#F34B27;color:white;width:150px;height:40px;position:relative:margin-top:5px;">
+                       </center> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                        Upload Image
+                    </td>
+                    <td>
+                        <input type="file" name="img1">
+                    </td>
+                </tr>
+              
+
+            </table>
+        </form>
+    </div>
     
 </body>
 </html>
