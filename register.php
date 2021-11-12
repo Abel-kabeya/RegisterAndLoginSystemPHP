@@ -23,20 +23,17 @@ require "database/mysql.php";
 
                 <tr>
                     <td><center>Username</center></td>
-                    <td><input type="text" name="username" placeholder="type your username"></td>
+                    <td><input type="text" name="username" placeholder="type your username"required ></td>
                 </tr>
 
                 <tr>
                     <td><center>Password</center></td>
-                    <td><input type="password" name="password" placeholder="type your password"></td>
+                    <td><input type="password" name="password" placeholder="type your password" required></td>
                 </tr>
 
                 <tr>
-                    <td>
-                       <center>
-                           <input type="submit" name="Register" value="Register" style="background-color:#F34B27;color:white;width:150px;height:40px;position:relative:margin-top:5px;">
-                       </center> 
-                    </td>
+                    <td><center>Email</center></td>
+                    <td><input type="email" name="email" placeholder="type your email" required ></td>
                 </tr>
 
                 <tr>
@@ -47,7 +44,14 @@ require "database/mysql.php";
                         <input type="file" name="img1">
                     </td>
                 </tr>
-              
+
+                <tr>
+                    <td>
+                       <center>
+                           <input type="submit" name="Register" value="Register" style="background-color:#F34B27;color:white;width:150px;height:40px;position:relative:margin-top:5px;">
+                       </center> 
+                    </td>
+                </tr>
 
             </table>
         </form>
