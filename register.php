@@ -1,6 +1,5 @@
 <?php
 require "database/mysql.php";
-session_start();
 ?>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -11,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
 </head>
-<body background = "images/Universe.jpg">
+<body >
 
 <div id="Mainwrapper">
         <form method="post" enctype="multipart/form-data">
@@ -70,12 +69,36 @@ session_start();
         $temp_name=$_FILES['img1']['tmp_name'];
         $filepath="images/$img";
         move_uploaded_file($temp_name,$filepath);
-        $query2="INSERT INTO admin (username, password, email, img) VALUES('$username','$password', '$email','$img')";
-        $runquery2=mysqli_query($con,$query2);
-            if($runquery2)
-            {
-                echo '<script>alert("Account has been registered")</script>';
+        
+        // first check the database to make sure 
+        // a user does not already exist with the same username and/or email
+        $user_check_query = "SELECT * FROM admin WHERE username='$username' OR email='$email' LIMIT 1";
+        $result = mysqli_query($con, $user_check_query);
+        $user = mysqli_fetch_assoc($result);
+        
+        if ($user) { // if user exists
+            if ($user['username'] === $username) {
+                echo '<script>alert("Username already exists")</script>';
             }
+
+            if ($user['email'] === $email) {
+                echo '<script>alert("Email already exists")</script>';
+            }
+        }else
+        {
+
+            $query2="INSERT INTO admin (username, password, email, img) VALUES('$username','$password', '$email','$img')";
+            $runquery2=mysqli_query($con,$query2);
+                if($runquery2)
+                {
+                    echo '<script>alert("Account has been registered")</script>';
+                    $_SESSION['username'] = $username;
+                    header('location: Mainpage.php');
+                }
+
+        }
+        
+       
             
     }
 ?>
