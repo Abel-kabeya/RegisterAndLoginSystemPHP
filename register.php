@@ -10,7 +10,7 @@ require "database/mysql.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
 </head>
-<body >
+<body background= "images/Universe.jpg">
 
 <div id="Mainwrapper">
         <form method="post" enctype="multipart/form-data">
@@ -93,7 +93,7 @@ require "database/mysql.php";
                 {
                     echo '<script>alert("Account has been registered")</script>';
                     $_SESSION['username'] = $username;
-                    header('location: Mainpage.php');
+                   
                 }
 
         }

@@ -59,6 +59,7 @@ session_start();
         $runquery1=mysqli_query($con,$query1);
         if(mysqli_num_rows($runquery1)>0)
         {
+            echo '<script>alert("You are logged in")</script>';
             header('location:Mainpage.php');
             $_SESSION['username']=$username;
         }else
