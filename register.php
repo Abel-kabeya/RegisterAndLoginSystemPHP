@@ -1,5 +1,6 @@
 <?php
 require "database/mysql.php";
+session_start();
 ?>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -64,11 +65,12 @@ require "database/mysql.php";
     {
         $username=$_POST['username'];
         $password=$_POST['password'];
+        $email=$_POST['email'];
         $img=$_FILES['img1']['name'];
         $temp_name=$_FILES['img1']['tmp_name'];
         $filepath="images/$img";
         move_uploaded_file($temp_name,$filepath);
-        $query2="INSERT INTO admin (username, password, img) VALUES('$username','$password','$img')";
+        $query2="INSERT INTO admin (username, password, email, img) VALUES('$username','$password', '$email','$img')";
         $runquery2=mysqli_query($con,$query2);
             if($runquery2)
             {
