@@ -8,18 +8,18 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login Form</title>
 </head>
-<body background = "images/Galaxy.jpg">
+<body background="images/Galaxy.jpg">
+
+    <div class="title1">
+        <h1>Login Form</h1>
+    </div>
+    
 <div id="Mainwrapper">
         <form method="post" enctype="multipart/form-data">
-            <table align="center" style="color:white;width:365px;height:200px;postion:relative;margin-top:200px;"border="1">
-                <tr>
-                    <td style="position:relative;left:50px;bottom:5px;background-color:#1D2247;">
-                        <center><h3>Login Form</h3></center>
-                    </td>
-                </tr>
-
+            <table align="center" name="login">
                 <tr>
                     <td><center>Username</center></td>
                     <td><input type="text" name="username" placeholder="type your username"></td>
@@ -33,12 +33,12 @@ session_start();
                 <tr>
                     <td>
                         <center>
-                            <input type="submit" name="SignIn" value="Login" style="background-color:#42729b;color:white;width:100px;height:40px;position:relative;margin-top:5px;">
+                            <input type="submit" name="SignIn" value="Login">
                         </center>
                     </td>
                     <td>
                        <center>
-                           <a href="register.php"><input type="button" name="Register" value="Register" style="background-color:#F34B27;color:white;width:150px;height:40px;position:relative:margin-top:5px;"></a>
+                           <a href="register.php"><input type="button" name="Register" value="Register"></a>
                        </center> 
                     </td>
 

@@ -1,0 +1,51 @@
+table {
+  color: white;
+  width: 365px;
+  height: 200px;
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.title1 {
+  color: white;
+  margin-left: 580px;
+  margin-right: 580px;
+  margin-top: 150px;
+  text-align: center;
+  position: relative;
+  background-color: #1d2247;
+}
+
+.title2 {
+  color: white;
+  margin-left: 530px;
+  margin-right: 530px;
+  margin-top: 150px;
+  text-align: center;
+  position: relative;
+  background-color: #1d2247;
+}
+
+input[name="SignIn"] {
+  background-color: #42729b;
+  color: white;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  margin-top: 5px;
+}
+
+input[name="Register"] {
+  background-color: #f34b27;
+  color: white;
+  width: 150px;
+  height: 40px;
+  position: relative;
+  margin-top: 5px;
+}

@@ -8,19 +8,16 @@ require "database/mysql.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Registration Form</title>
 </head>
-<body background= "images/Universe.jpg">
-
+<body background="images/Universe.jpg">
+    <div class="title2">
+        <h1>Registration Form</h1>
+    </div>
 <div id="Mainwrapper">
         <form method="post" enctype="multipart/form-data">
-            <table align="center" style="color:white;width:365px;height:200px;postion:relative;margin-top:200px;"border="1">
-                <tr>
-                    <td style="position:relative;left:50px;bottom:5px;background-color:#1D2247;">
-                        <center><h3>Register Form</h3></center>
-                    </td>
-                </tr>
-
+            <table align="center">
                 <tr>
                     <td><center>Username</center></td>
                     <td><input type="text" name="username" placeholder="type your username"required ></td>
@@ -48,7 +45,7 @@ require "database/mysql.php";
                 <tr>
                     <td>
                        <center>
-                           <input type="submit" name="Register" value="Register" style="background-color:#F34B27;color:white;width:150px;height:40px;position:relative:margin-top:5px;">
+                           <input type="submit" name="Register" value="Register">
                        </center> 
                     </td>
                 </tr>

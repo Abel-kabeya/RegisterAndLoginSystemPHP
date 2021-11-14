@@ -11,6 +11,19 @@ session_start();
     <link rel="" type="" href="css/style.css">
     <title>Mainpage</title>
 </head>
+<style>
+    img, p
+    {
+        width: 200px;
+        border-radius: 100px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 20px;
+        
+    }
+    
+</style>
 <body >
    <?php
         if(isset($_SESSION['username']))
@@ -23,21 +36,9 @@ session_start();
             $username=$rowdata['username'];
             $img=$rowdata['img'];
             
-            echo 
-            "<table>
-                <tr>
-                    <td>Image</td>
-                    <td><img src='images/$img'width='100px' height='100px'></td>
-                </tr>
+            echo ("<img src=images/$img><p>$username</p>");
+            
 
-                <tr>
-                    <td>Username</td>
-                    <td>$username</td>
-                </tr>
-            </table>";
-        }else
-        {
-            echo "Welcome admin";
         }
            
    ?>
