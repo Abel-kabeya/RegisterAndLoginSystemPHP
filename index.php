@@ -1,6 +1,13 @@
 <?php
 require 'database/mysql.php';
 session_start();
+if($_SESSION['username'])
+{
+    //echo '<script>alert("Successful login")</script>';
+}else
+{
+    header("location: index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

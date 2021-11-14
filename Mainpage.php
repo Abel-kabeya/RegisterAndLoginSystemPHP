@@ -2,6 +2,7 @@
 require 'database/mysql.php';
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +26,11 @@ session_start();
             
             echo ("<img src=images/$img><p>$username</p>");
             
-        }
-           
+        }  
    ?>
+
+         
+    <a href="index.php"><center><input type="button" name="Logout" value="Logout"></a></center></a>
     
 </body>
 </html>
