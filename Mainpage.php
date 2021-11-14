@@ -8,22 +8,9 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="" type="" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Mainpage</title>
-</head>
-<style>
-    img, p
-    {
-        width: 200px;
-        border-radius: 100px;
-        float: left;
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-top: 20px;
-        
-    }
-    
-</style>
+</head> 
 <body >
    <?php
         if(isset($_SESSION['username']))
@@ -38,7 +25,6 @@ session_start();
             
             echo ("<img src=images/$img><p>$username</p>");
             
-
         }
            
    ?>

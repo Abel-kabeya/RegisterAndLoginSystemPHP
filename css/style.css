@@ -32,6 +32,16 @@ table td {
   background-color: #1d2247;
 }
 
+img,
+p {
+  width: 200px;
+  border-radius: 100px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
 input[name="SignIn"] {
   background-color: #42729b;
   color: white;
